@@ -80,7 +80,7 @@ img {
     height: auto;
 }
 
-/* 記事内画像 */
+/* 記事内画像の基本サイズ */
 figure img {
     display: block;
     max-width: 650px;
@@ -88,6 +88,12 @@ figure img {
     height: auto;
     margin: 0 auto;
 }
+
+/* 縦長画像だけ少し小さめに表示 */
+figure.image-portrait img {
+    max-width: 420px;
+}
+
 /* 画像と説明文 */
 figure {
     margin: 20px 0;
