@@ -5,6 +5,7 @@
 <head内に<link rel="stylesheet" href="style.css"を挿入
 
 メモ
+<br>ページ作成後サイトマップ.xmlにURLと更新日を追加
 <br>〇〇の攻略ページを追加
 <br>〇〇のプレイ日記を追加
 <br>〇〇の修理記録を追加
