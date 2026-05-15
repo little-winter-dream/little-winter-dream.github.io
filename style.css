@@ -89,9 +89,11 @@ figure img {
     margin: 0 auto;
 }
 
-/* 縦長画像だけ少し小さめに表示 */
+/* 縦長画像：Bloggerの中サイズに近い表示 */
 figure.image-portrait img {
-    max-width: 420px;
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
 }
 
 /* 画像と説明文 */
