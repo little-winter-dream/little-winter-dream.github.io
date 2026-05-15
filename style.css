@@ -41,11 +41,11 @@ h3 {
 
 /* 折りたたみ（details）の見た目 */
 details {
-    background-color: #fffaf0; /* 中身はアイボリー */
+    background-color: #fffaf0;
     border: 1px solid #9999cc;
     margin: 16px 0;
     padding: 10px;
-    border-radius: 8px; /* 角を丸く */
+    border-radius: 8px;
 }
 
 /* 押せる場所（summary）の見た目 */
@@ -53,16 +53,43 @@ summary {
     cursor: pointer;
     font-weight: bold;
     color: #4a3520;
-    background-color: #f0e6d6; /* 閉じてる時も少し色をつける */
-    padding: 10px 12px;
+    background-color: #f0e6d6;
+    padding: 10px 12px 10px 34px;
     border-radius: 5px;
-    list-style: inside; /* 三角マークを表示 */
-    transition: background-color 0.3s; /* 色の変化をなめらかに */
+    transition: background-color 0.3s;
+    list-style: none;
+    position: relative;
+}
+
+/* ブラウザ標準の三角を消す */
+summary::-webkit-details-marker {
+    display: none;
+}
+summary::marker {
+    content: "";
+}
+
+.note {
+    font-size: 90%;
+    color: #666666;
+}
+
+/* 閉じている時のマーク */
+summary::before {
+    content: "▶";
+    position: absolute;
+    left: 12px;
+    color: #4a3520;
+}
+
+/* 開いている時のマーク */
+details[open] summary::before {
+    content: "▼";
 }
 
 /* マウスを乗せた時 */
 summary:hover {
-    background-color: #dcd0ff; /* ふんわりラベンダー色に変わる */
+    background-color: #dcd0ff;
     text-decoration: none;
 }
 
