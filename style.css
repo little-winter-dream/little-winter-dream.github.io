@@ -74,6 +74,22 @@ summary::marker {
     color: #666666;
 }
 
+/* 画像の表示調整 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 画像と説明文 */
+figure {
+    margin: 20px 0;
+}
+
+figcaption {
+    font-size: 90%;
+    color: #666666;
+}
+
 /* 閉じている時のマーク */
 summary::before {
     content: "▶";
