@@ -1,71 +1,73 @@
+/* 全体の設定 */
 body {
-  background-color: #e6e6fa;
-  color: #333333;
-  font-family: sans-serif;
-  line-height: 1.8;
-  margin: 0;
-  padding: 0;
+    background-color: #e6e6fa; /* 薄ラベンダー */
+    color: #333333;
+    font-family: sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
 }
 
-header,
-main,
-footer {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* リンクの色 */
 a {
-  color: #3366cc;
+    color: #3366cc;
 }
 
 a:visited {
-  color: #663399;
+    color: #663399;
 }
 
-h1,
-h2,
-h3 {
-  color: #4a3520;
-}
-
-h1 {
-  margin-top: 0;
+/* 見出しの色 */
+h1, h2, h3 {
+    color: #4a3520; /* 濃い茶色 */
 }
 
 h2 {
-  margin-top: 32px;
-  border-bottom: 1px solid #9999cc;
-  padding-bottom: 4px;
+    margin-top: 32px;
+    border-bottom: 1px solid #9999cc;
+    padding-bottom: 4px;
 }
 
 h3 {
-  margin-top: 20px;
-  margin-bottom: 6px;
+    margin-top: 20px;
+    margin-bottom: 6px;
 }
 
+/* 折りたたみ（details）の見た目 */
 details {
-  background-color: #fffaf0;
-  border: 1px solid #9999cc;
-  margin: 16px 0;
-  padding: 12px 16px;
+    background-color: #fffaf0; /* 中身はアイボリー */
+    border: 1px solid #9999cc;
+    margin: 16px 0;
+    padding: 10px;
+    border-radius: 8px; /* 角を丸く */
 }
 
+/* 押せる場所（summary）の見た目 */
 summary {
-  cursor: pointer;
-  font-weight: bold;
-  color: #4a3520;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4a3520;
+    background-color: #f0e6d6; /* 閉じてる時も少し色をつける */
+    padding: 10px 12px;
+    border-radius: 5px;
+    list-style: inside; /* 三角マークを表示 */
+    transition: background-color 0.3s; /* 色の変化をなめらかに */
 }
 
+/* マウスを乗せた時 */
 summary:hover {
-  text-decoration: underline;
-}
-
-ul {
-  margin-top: 6px;
+    background-color: #dcd0ff; /* ふんわりラベンダー色に変わる */
+    text-decoration: none;
 }
 
 footer {
-  font-size: 90%;
-  color: #666666;
+    font-size: 90%;
+    color: #666666;
+    margin-top: 40px;
 }
