@@ -127,6 +127,26 @@ summary:hover {
     text-decoration: none;
 }
 
+/* 表の表示調整 */
+.info-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+    background-color: #fffaf0;
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #999999;
+    padding: 8px;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: #f0e6d6;
+    white-space: nowrap;
+}
+
 footer {
     font-size: 90%;
     color: #666666;
