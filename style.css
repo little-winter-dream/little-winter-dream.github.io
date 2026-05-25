@@ -156,6 +156,25 @@ summary:hover {
 .info-table tr:last-child td {
     border-bottom: none;
 }
+
+/* ---- ここから下を付け足す ---- */
+
+/* 表をスマホで横スクロールできるようにする */
+.table-wrap {
+    overflow-x: auto;
+}
+
+/* 攻略メモ用の囲み枠 */
+.memo-box {
+    border: 1px solid #ddccbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background-color: #fffaf0;
+    margin: 12px 0;
+}
+
+/* ---- 追加ここまで ---- */
+
 footer {
     font-size: 90%;
     color: #666666;
