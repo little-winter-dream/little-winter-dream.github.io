@@ -148,13 +148,27 @@ summary:hover {
 .info-table th {
     background-color: #f7eedf;
     color: #665544;
-    width: 30%;
     white-space: nowrap;
 }
 
+/* 1列目だけ幅を少し固定 */
+.info-table th:first-child {
+    width: 30%;
+}
 .info-table tr:last-child th,
 .info-table tr:last-child td {
     border-bottom: none;
+}
+
+/* 表の1列目と2列目の間に縦の区切り点線を入れる */
+.info-table th:first-child,
+.info-table td:first-child {
+    border-right: 1px dashed #ddccbb;
+}
+
+/* スマホで「A / B / Y / X」などのボタン名が変に折り返されないようにする */
+.info-table td:first-child {
+    white-space: nowrap;
 }
 
 /* ---- ここから下を付け足す ---- */
