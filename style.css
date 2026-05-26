@@ -253,6 +253,47 @@ h3[id] {
     line-height: 1.7;
 }
 
+/* 塔ごとの攻略ボックス */
+.walkthrough-box {
+    background-color: #fffaf0;
+    border: 1px solid #ddccbb;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 16px 0;
+}
+
+/* 攻略ボックス内の最初の見出しだけ上余白を控えめにする */
+.walkthrough-box h3:first-child {
+    margin-top: 0;
+}
+
+/* 敵データ用のコンパクト表 */
+.enemy-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+    background-color: #fffaf0;
+    font-size: 95%;
+}
+
+.enemy-table th,
+.enemy-table td {
+    border: 1px dashed #ddccbb;
+    padding: 6px 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.enemy-table th {
+    background-color: #f7eedf;
+    color: #665544;
+    white-space: nowrap;
+}
+
+.enemy-table td:nth-child(2),
+.enemy-table td:nth-child(4) {
+    white-space: nowrap;
+}
 
 /* =========================
    11. フッター
