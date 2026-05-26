@@ -231,7 +231,31 @@ figcaption {
 
 
 /* =========================
-   10. フッター
+   10. ストーリー攻略用
+========================= */
+
+/* 目次ジャンプ時、見出しの上に少し余白を作る */
+h2[id],
+h3[id] {
+    scroll-margin-top: 90px;
+}
+
+/* ストーリー攻略用のメモ表示 */
+.walkthrough-pre {
+    overflow-x: auto;
+    white-space: pre;
+    background-color: #fffaf0;
+    border: 1px solid #ddccbb;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 90%;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   11. フッター
 ========================= */
 
 footer {
