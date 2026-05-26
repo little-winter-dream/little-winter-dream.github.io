@@ -243,14 +243,14 @@ h3[id] {
 /* ストーリー攻略用のメモ表示 */
 .walkthrough-pre {
     overflow-x: auto;
-    white-space: pre;
+    white-space: pre-wrap;
     background-color: #fffaf0;
     border: 1px solid #ddccbb;
     border-radius: 8px;
     padding: 12px;
-    font-family: monospace;
+    font-family: inherit;
     font-size: 100%;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 /* 塔ごとの攻略ボックス */
