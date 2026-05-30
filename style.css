@@ -216,6 +216,35 @@ figcaption {
     white-space: nowrap;
 }
 
+/* グルグル一覧用の表 */
+.guruguru-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.5em 0;
+    background-color: #fffaf0;
+    font-size: 95%;
+}
+
+.guruguru-table th,
+.guruguru-table td {
+    border: 1px dashed #ddccbb;
+    padding: 6px 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.guruguru-table th {
+    background-color: #f7eedf;
+    color: #665544;
+    white-space: nowrap;
+}
+
+.guruguru-table td:nth-child(1),
+.guruguru-table td:nth-child(2),
+.guruguru-table td:nth-child(3) {
+    white-space: nowrap;
+}
+
 
 /* =========================
    9. 攻略メモ用の囲み枠
