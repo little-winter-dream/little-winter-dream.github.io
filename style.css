@@ -261,6 +261,12 @@ figcaption {
     font-weight: bold;
 }
 
+/* 下線なしの補助見出し */
+.no-border-heading {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
 /* =========================
    9. 攻略メモ用の囲み枠
 ========================= */
