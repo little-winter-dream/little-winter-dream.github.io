@@ -245,6 +245,21 @@ figcaption {
     white-space: nowrap;
 }
 
+/* アイテム・装備品一覧用 */
+.item-num {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.item-attr {
+    white-space: nowrap;
+}
+
+.item-group td {
+    background-color: #f7eedf;
+    color: #665544;
+    font-weight: bold;
+}
 
 /* =========================
    9. 攻略メモ用の囲み枠
