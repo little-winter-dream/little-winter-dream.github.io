@@ -1,73 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://little-winter-dream.github.io/</loc>
     <lastmod>2026-05-22</lastmod>
   </url>
-
   <url>
     <loc>https://little-winter-dream.github.io/about.html</loc>
     <lastmod>2026-05-19</lastmod>
   </url>
-
   <url>
     <loc>https://little-winter-dream.github.io/privacy.html</loc>
     <lastmod>2026-05-19</lastmod>
   </url>
-
   <url>
     <loc>https://little-winter-dream.github.io/repair/wonderswan-polarizer.html</loc>
     <lastmod>2026-05-26</lastmod>
   </url>
-
   <url>
     <loc>https://little-winter-dream.github.io/repair/another-bible-battery.html</loc>
     <lastmod>2026-05-20</lastmod>
   </url>
-
   <url>
     <loc>https://little-winter-dream.github.io/repair/guruguru-sfc-cleaning.html</loc>
     <lastmod>2026-05-19</lastmod>
   </url>
-
   <url>
     <loc>https://little-winter-dream.github.io/guruguru-sfc/</loc>
     <lastmod>2026-06-07</lastmod>
   </url>
-
   <url>
     <loc>https://little-winter-dream.github.io/guruguru-sfc/basic-story.html</loc>
     <lastmod>2026-05-30</lastmod>
   </url>
-
 <url>
   <loc>https://little-winter-dream.github.io/guruguru-sfc/basic-system.html</loc>
   <lastmod>2026-05-30</lastmod>
 </url>
-  
+
 <url>
   <loc>https://little-winter-dream.github.io/guruguru-sfc/story-walkthrough-01.html</loc>
   <lastmod>2026-05-30</lastmod>
 </url>
-
   <url>
   <loc>https://little-winter-dream.github.io/guruguru-sfc/story-walkthrough-02.html</loc>
   <lastmod>2026-05-30</lastmod>
 </url>
-
 <url>
   <loc>https://little-winter-dream.github.io/guruguru-sfc/guruguru-list.html</loc>
   <lastmod>2026-05-30</lastmod>
 </url>
-
   <url>
   <loc>https://little-winter-dream.github.io/guruguru-sfc/item-equipment-list.html</loc>
   <lastmod>2026-06-07</lastmod>
 </url>
-
 <url>
   <loc>https://little-winter-dream.github.io/guruguru-sfc/play-impressions.html</loc>
+  <lastmod>2026-06-15</lastmod>
+</url>
+<url>
+  <loc>https://little-winter-dream.github.io/survival-kids-2/</loc>
+  <lastmod>2026-06-15</lastmod>
+</url>
+<url>
+  <loc>https://little-winter-dream.github.io/survival-kids-2/basic-story.html</loc>
+  <lastmod>2026-06-15</lastmod>
+</url>
+<url>
+  <loc>https://little-winter-dream.github.io/survival-kids-2/system-items.html</loc>
+  <lastmod>2026-06-15</lastmod>
+</url>
+<url>
+  <loc>https://little-winter-dream.github.io/survival-kids-2/ending-list.html</loc>
+  <lastmod>2026-06-15</lastmod>
+</url>
+<url>
+  <loc>https://little-winter-dream.github.io/survival-kids-2/play-impressions.html</loc>
   <lastmod>2026-06-15</lastmod>
 </url>
   
