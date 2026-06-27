@@ -267,6 +267,13 @@ figcaption {
     padding-bottom: 0;
 }
 
+/* 攻略マップ画像：やや小さめに表示 */
+figure.map-figure img {
+    max-width: 560px;
+    width: 100%;
+    height: auto;
+}
+
 /* =========================
    9. 攻略メモ用の囲み枠
 ========================= */
