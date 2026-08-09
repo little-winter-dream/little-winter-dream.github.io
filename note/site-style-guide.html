@@ -1,9 +1,8 @@
 <!doctype html>
-
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>表記・運用ルール - 冬夢のレトロゲーム攻略メモ</title>
   <meta name="description" content="冬夢のレトロゲーム攻略メモの記事作成・移行時に使う表記ルール、HTMLテンプレート、作品表記、サイトマップの運用メモです。">
   <meta name="robots" content="noindex, nofollow">
@@ -13,162 +12,184 @@
 <body>
   <header>
     <h1>冬夢のレトロゲーム攻略メモ 表記・運用ルール</h1>
-    <p class="note">
-      最終更新日：2026/06/14
-    </p>
+    <p class="note">最終更新日：2026/08/09</p>
   </header>
+
   <main>
     <p>
-      このメモは、GitHub Pages版「冬夢のレトロゲーム攻略メモ」で記事を作成・移行するときの表記ルールをまとめたものです。
+      このページは、GitHub Pages版「冬夢のレトロゲーム攻略メモ」で記事を作成・移行・更新するときの基準書です。新しいページを作るときは、まず「公開前チェックリスト」を確認し、必要に応じて各項目の詳しいルールを参照します。
     </p>
 
-    <h2>最重要ルール</h2>
-
+    <h2>このページの扱い</h2>
     <ul>
-      <li>攻略記事タイトルには、原則として【ゲーム攻略】を付けない。</li>
-      <li>修理記事は、必要に応じて【修理記録】を付けてもよい。</li>
-      <li>作品権利表記は「出典」ではなく【作品について】を使う。</li>
-      <li>本文の最終更新日は <code>YYYY/MM/DD</code> 形式にする。</li>
-      <li>sitemapの <code>lastmod</code> は <code>YYYY-MM-DD</code> 形式にする。</li>
-      <li>Blogger側のリンクは、GitHub Pages用の相対リンクに置き換える。</li>
+      <li>サイト制作の内部ルール集として使用する。</li>
+      <li>検索結果に出さないため、<code>noindex, nofollow</code>を設定する。</li>
+      <li>通常の記事ページからはリンクしない。</li>
+      <li><code>sitemap.xml</code>には追加しない。</li>
+      <li>このページ自体にはGoogle Analyticsを設置しなくてよい。</li>
     </ul>
 
+    <h2>公開前チェックリスト</h2>
+    <ul>
+      <li><code>&lt;title&gt;</code>と<code>meta description</code>がページ内容に合っているか。</li>
+      <li>Google Analytics（測定ID：<code>G-68L45S7GXM</code>）が<code>head</code>内にあるか。</li>
+      <li>サイト内リンクと画像パスが相対リンクになっているか。</li>
+      <li>トップページや作品別攻略目次へ戻るリンクが正しいか。</li>
+      <li>画像に内容の分かる<code>alt</code>が付いているか。</li>
+      <li>記事下部に【作品について】と日付があるか。</li>
+      <li>本文の日付が<code>YYYY/MM/DD</code>形式になっているか。</li>
+      <li>公開ページに不要な<code>noindex</code>が残っていないか。</li>
+      <li>新規記事や更新記事が作品別攻略目次などからたどれるか。</li>
+      <li><code>sitemap.xml</code>への追加・<code>lastmod</code>更新が必要か。</li>
+      <li>連続記事では、一覧・前後記事からのリンクが正しいか。</li>
+    </ul>
+
+    <h2>最重要の表記ルール</h2>
+    <ul>
+      <li>攻略記事タイトルには、原則として【ゲーム攻略】を付けない。</li>
+      <li>修理・メンテナンス記事は、必要に応じて【修理記録】を付けてもよい。</li>
+      <li>作品の権利表記は「出典」ではなく【作品について】を使う。</li>
+      <li>本文の最終更新日は<code>YYYY/MM/DD</code>形式にする。</li>
+      <li><code>sitemap.xml</code>の<code>lastmod</code>は<code>YYYY-MM-DD</code>形式にする。</li>
+      <li>独自ドメインへの移行に備え、サイト内リンクは原則として相対リンクにする。</li>
+      <li>Blogger版から移行するときは、Blogger側のリンクをGitHub Pages用の相対リンクへ置き換える。</li>
+    </ul>
+
+    <h2>ページ種類ごとの必須項目</h2>
+
+    <h3>攻略記事・攻略データ</h3>
+    <ul>
+      <li>記事内容が分かるタイトルと<code>meta description</code></li>
+      <li>Google Analytics</li>
+      <li>トップページ・作品別攻略目次へ戻るリンク</li>
+      <li>必要に応じた見出し、表、画像、攻略マップ</li>
+      <li>【作品について】</li>
+      <li>最終更新日</li>
+      <li>作品別攻略目次からのリンク</li>
+      <li><code>sitemap.xml</code>の追加または更新</li>
+    </ul>
+
+    <h3>攻略目次・プレイ日記一覧</h3>
+    <ul>
+      <li>作品名とページの役割が分かるタイトル・説明文</li>
+      <li>Google Analytics</li>
+      <li>掲載済み記事へのリンク</li>
+      <li>トップページへ戻るリンク</li>
+      <li>【作品について】</li>
+      <li>ページ作成日または最終更新日</li>
+      <li><code>sitemap.xml</code>の追加または更新</li>
+    </ul>
+
+    <h3>修理・メンテナンス記録</h3>
+    <ul>
+      <li>必要に応じてタイトルに【修理記録】を付ける。</li>
+      <li>使用した道具や作業内容、注意点を実際の作業に基づいて記載する。</li>
+      <li>写真は作業箇所が分かる<code>alt</code>と<code>figcaption</code>を付ける。</li>
+      <li>Google Analytics、戻るリンク、【作品について】、最終更新日、<code>sitemap.xml</code>を確認する。</li>
+    </ul>
+
+    <h3>サイト案内・内部ページ</h3>
+    <ul>
+      <li>トップページへ戻るリンクを付ける。</li>
+      <li>検索から来る必要が薄いページは、目的に応じて<code>noindex</code>を設定する。</li>
+      <li>内部運用メモは通常ページからリンクせず、<code>sitemap.xml</code>にも載せない。</li>
+    </ul>
+
+    <h2>基本HTML構成</h2>
+    <p>作品フォルダ内の一般的な記事では、次の要素を基本とする。</p>
+
+    <pre class="walkthrough-pre"><code>&lt;!doctype html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+  &lt;!-- Google Analytics --&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;記事タイトル｜冬夢のレトロゲーム攻略メモ&lt;/title&gt;
+  &lt;meta name="description" content="記事内容が分かる短い説明文。"&gt;
+  &lt;link rel="stylesheet" href="../style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;記事タイトル&lt;/h1&gt;
+    &lt;p&gt;
+      &lt;a href="../index.html"&gt;トップページへ戻る&lt;/a&gt; /
+      &lt;a href="index.html"&gt;攻略目次へ戻る&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;!-- 本文 --&gt;
+
+    &lt;p&gt;&lt;a href="index.html"&gt;→ 攻略目次へ戻る&lt;/a&gt;&lt;/p&gt;
+
+    &lt;hr&gt;
+    &lt;div class="note"&gt;
+      &lt;p&gt;
+        &lt;strong&gt;【作品について】&lt;/strong&gt;&lt;br&gt;
+        本ページで扱う作品名・各種権利は、各権利者に帰属します。&lt;br&gt;
+        『作品名』（機種名）&lt;br&gt;
+        ©権利表記
+      &lt;/p&gt;
+      &lt;p&gt;最終更新日：YYYY/MM/DD&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h2>Google Analytics</h2>
     <p>
-      このファイルはサイト運用メモのため、通常の記事ページからはリンクしません。公開目的でもありません。<br>
-      また、<code>sitemap.xml</code> にも追加しません。<br>
-      誤って追加されていた場合は、気づいた時点でリンクやサイトマップから削除します。
+      攻略記事、修理記録、作品別目次、基本情報、感想ページなど、閲覧数を確認したい公開HTMLページでは、次のコードを<code>head</code>内へ追加する。
     </p>
 
-<details class="memo-box">
-  <summary>個人的なメモ</summary>
+    <pre class="walkthrough-pre"><code>&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-68L45S7GXM"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <p>
-    まず前提として、データ収集や本文作成は自分の手でプレイして集めたり書いたうえで、文章の読みやすさやHTMLコードなど複雑な点を補助するためにAIの助けを借りることが重要です。
-  </p>
+  gtag('config', 'G-68L45S7GXM');
+&lt;/script&gt;</code></pre>
 
-  <p>
-    私にとってこのブログの目的、重要な点はレトロゲームをプレイする人の助けになれる事です。
-  </p>
+    <p>
+      独自ドメインへ切り替える場合は、Google AnalyticsのGA4データストリームURLも新しいドメインへ変更することを推奨する。
+    </p>
 
-  <p>
-    今の時代、説明書無しのソフト単体で販売されている場合が多いです。プレイする時必要な情報がこのサイトから得られるように、攻略に行き詰まった時に、私が得た知識の一部でも役に立てば助かる人がいるかもしれません。
-  </p>
+    <h2>タイトルとmeta description</h2>
+    <p>
+      <code>&lt;title&gt;</code>には記事タイトルとサイト名を入れる。区切り記号は、同じ作品・同じ種類の既存ページに合わせる。
+    </p>
+    <p>攻略記事の例：</p>
+    <pre class="walkthrough-pre"><code>『魔法陣グルグル』（SFC）ストーリー攻略 前半｜オープニング～聖なる塔</code></pre>
+    <p>修理記事の例：</p>
+    <pre class="walkthrough-pre"><code>【修理記録】ワンダースワンの偏光板を交換してみた</code></pre>
+    <p>プレイ感想記事の例：</p>
+    <pre class="walkthrough-pre"><code>『魔法陣グルグル』（SFC）プレイ感想｜遊んでみた感想まとめ</code></pre>
 
-  <p>
-    西暦1998年頃にあった昔の個人攻略サイトなどは失われつつあるでしょう。あの人たちが作り上げたレベルとはいかなくても、私が不完全でも新しく発信していけば未来に繋がる物もあるかもしれません。
-  </p>
+    <p>
+      <code>meta description</code>は、検索結果に表示されても自然で、ページ内容が分かる短い説明にする。
+    </p>
+    <pre class="walkthrough-pre"><code>&lt;meta name="description" content="スーパーファミコン版『魔法陣グルグル』のストーリー攻略前半です。オープニングから聖なる塔までの出現モンスター、宝箱、攻略メモをまとめています。"&gt;</code></pre>
 
-  <p>
-    小さくても、未熟でも構いません。何年後にも何十年後にもなるかもしれませんが、あなたが作り上げた物が誰かの助けになるかもしれません。
-  </p>
-
-  <p>
-    見知らぬ誰かが作った攻略サイトに助けられた事を忘れないで、今度はあなたがその見知らぬ誰かになれたなら……きっとそれが私の、あなたの人生を使ってでも成し遂げるモノのひとつに成り得るでしょう。
-  </p>
-
-  <p>
-    最後に、もしこのページを見つけた方がいらっしゃいましたらそっとしておいてください。
-  </p>
-
-  <p>
-    「小さな幻想の小部屋」は、このブログの別名としてつけています。<br>
-    私が望むのは小さくても幻のように儚くても構いません、私が幸せだと信じられる物の為に生きようとしています。<br>
-    このブログもその一つです。
-  </p>
-</details>
-
-<h2>保存場所</h2>
-
-<pre class="walkthrough-pre"><code>編集用：note/site-style-guide.md
-```
-
-確認用：note/site-style-guide.html</code></pre>
-
-```
-<h2>サイト名</h2>
-
-<pre class="walkthrough-pre"><code>冬夢のレトロゲーム攻略メモ</code></pre>
-
-<h2>記事タイトルの方針</h2>
-
-<p>
-  攻略記事では、基本的に【ゲーム攻略】のようなラベルは付けない。
-</p>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>『魔法陣グルグル』（SFC）ストーリー攻略 前半｜オープニング～聖なる塔</code></pre>
-
-<p>
-  修理・メンテナンス系の記事では、カテゴリが分かりやすいように【修理記録】を付けてもよい。
-</p>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>【修理記録】ワンダースワンの偏光板を交換してみた</code></pre>
-
-<p>
-  プレイ感想記事では、必要に応じて自然なタイトルにする。
-</p>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>『魔法陣グルグル』（SFC）プレイ感想｜遊んでみた感想まとめ</code></pre>
-
-<h2>ファイル名の方針</h2>
-
-<p>
-  英小文字・ハイフン区切りを基本にする。
-</p>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>story-walkthrough-01.html
-```
-
-story-walkthrough-02.html
-guruguru-list.html
+    <h2>ファイル名</h2>
+    <p>英小文字とハイフン区切りを基本にし、内容が分かる名前にする。</p>
+    <pre class="walkthrough-pre"><code>story-walkthrough-01.html
 item-equipment-list.html
 play-impressions.html</code></pre>
 
-```
-<h2>基本HTMLテンプレート</h2>
+    <h2>リンク</h2>
+    <p>サイト内リンクは原則として相対リンクを使用する。</p>
+    <pre class="walkthrough-pre"><code>&lt;a href="../index.html"&gt;トップページへ戻る&lt;/a&gt;
+&lt;a href="index.html"&gt;攻略目次へ戻る&lt;/a&gt;</code></pre>
+    <ul>
+      <li>作品フォルダ内の記事は、作品別攻略目次へ戻れるようにする。</li>
+      <li>連続記事は、一覧ページまたは前後記事からたどれるようにする。</li>
+      <li>新規記事を公開したら、作品別攻略目次など必要な一覧ページへリンクを追加する。</li>
+    </ul>
 
-<p>
-  作品フォルダ内の記事では、基本的に以下の形を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;!doctype html&gt;
-```
-
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>記事タイトル - 冬夢のレトロゲーム攻略メモ</title>
-<meta name="description" content="記事の説明文を入れる。">
-<link rel="stylesheet" href="../style.css">
-</head>
-
-<body>
-<header>
-<h1>記事タイトル</h1>
-<p>
-<a href="../index.html">トップページへ戻る</a> /
-<a href="index.html">攻略目次へ戻る</a>
-</p>
-</header>
-
-<main>
-<!-- 本文 -->
-
-```
-&lt;p&gt;
-  &lt;a href="index.html"&gt;→ 攻略目次へ戻る&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;hr&gt;
-
+    <h2>【作品について】と日付</h2>
+    <p>記事下部の権利表記には「出典」ではなく【作品について】を使う。</p>
+    <pre class="walkthrough-pre"><code>&lt;hr&gt;
 &lt;div class="note"&gt;
   &lt;p&gt;
     &lt;strong&gt;【作品について】&lt;/strong&gt;&lt;br&gt;
@@ -176,431 +197,123 @@ play-impressions.html</code></pre>
     『作品名』（機種名）&lt;br&gt;
     ©権利表記
   &lt;/p&gt;
-
-  &lt;p&gt;
-    最終更新日：YYYY/MM/DD
-  &lt;/p&gt;
-&lt;/div&gt;
-```
-
-</main>
-
-<footer>
-<p>&copy; 2026 冬夢のレトロゲーム攻略メモ</p>
-</footer>
-</body>
-</html></code></pre>
-
-```
-<h2>meta description の方針</h2>
-
-<p>
-  <code>meta name="description"</code> には、検索結果に出ても自然な短い説明を入れる。
-</p>
-
-<p>
-  長くしすぎず、記事内容が分かるようにする。
-</p>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>&lt;meta name="description" content="スーパーファミコン版『魔法陣グルグル』のストーリー攻略前半です。オープニングから聖なる塔までの出現モンスター、宝箱、攻略メモをまとめています。"&gt;</code></pre>
-
-<p>プレイ感想記事の例：</p>
-
-<pre class="walkthrough-pre"><code>&lt;meta name="description" content="スーパーファミコン版『魔法陣グルグル』を最後まで遊んでみた感想です。戦闘や成長、アイテム・お金まわり、気になった点などをまとめています。"&gt;</code></pre>
-
-<h2>作品権利表記</h2>
-
-<p>
-  記事下部では「出典」ではなく、基本的に【作品について】表記を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;hr&gt;
-```
-
-<div class="note">
-<p>
-<strong>【作品について】</strong><br>
-本ページで扱う作品名・各種権利は、各権利者に帰属します。<br>
-『作品名』（機種名）<br>
-©権利表記
-</p>
-
-<p>
-最終更新日：YYYY/MM/DD
-</p>
-</div></code></pre>
-
-```
-<p>『魔法陣グルグル』（SFC）の場合：</p>
-
-<pre class="walkthrough-pre"><code>&lt;hr&gt;
-```
-
-<div class="note">
-<p>
-<strong>【作品について】</strong><br>
-本ページで扱う作品名・各種権利は、各権利者に帰属します。<br>
-『魔法陣グルグル』（スーパーファミコン）<br>
-©1995 衛藤ヒロユキ・TAM・TAM・ABC・電通・日本アニメーション・エニックス
-</p>
-
-<p>
-最終更新日：YYYY/MM/DD
-</p>
-</div></code></pre>
-
-```
-<h2>最終更新日の表記</h2>
-
-<p>
-  ページ本文では、以下の形式を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>YYYY/MM/DD</code></pre>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>最終更新日：2026/06/14</code></pre>
-
-<p>
-  サイトマップでは、以下の形式を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>YYYY-MM-DD</code></pre>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>&lt;lastmod&gt;2026-06-14&lt;/lastmod&gt;</code></pre>
-
-<h2>リンクの方針</h2>
-
-<p>
-  作品別攻略目次へ戻るリンクは、同じ作品フォルダ内では以下を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;a href="index.html"&gt;→ 攻略目次へ戻る&lt;/a&gt;</code></pre>
-
-<p>
-  作品名を入れる場合は以下のようにする。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;a href="index.html"&gt;→ 魔法陣グルグル攻略目次へ戻る&lt;/a&gt;</code></pre>
-
-<p>
-  トップページへ戻るリンクは、作品フォルダ内の記事では以下を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;a href="../index.html"&gt;トップページへ戻る&lt;/a&gt;</code></pre>
-
-<p>ヘッダーで両方を表示する場合：</p>
-
-<pre class="walkthrough-pre"><code>&lt;p&gt;
-```
-
-<a href="../index.html">トップページへ戻る</a> /
-<a href="index.html">攻略目次へ戻る</a>
-</p></code></pre>
-
-```
-<h2>noindex の方針</h2>
-
-<p>
-  通常の攻略記事・修理記事・プレイ感想記事は、基本的に <code>noindex</code> を付けない。
-</p>
-
-<p>
-  お問い合わせページ、プライバシーポリシー、運用メモなど、検索から来る必要が薄いページでは <code>noindex</code> を検討する。
-</p>
-
-<p>
-  HTMLページとして作る場合は、<code>head</code> 内に以下を入れる。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;meta name="robots" content="noindex, follow"&gt;</code></pre>
-
-<p>
-  サイト運用メモのように、検索にもリンク巡回にも出したくないページをHTMLで作る場合は、以下を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;meta name="robots" content="noindex, nofollow"&gt;</code></pre>
-
-<p>
-  ただし、<code>site-style-guide.md</code> および <code>site-style-guide.html</code> は運用メモとして置くため、基本的にサイト内からリンクせず、<code>sitemap.xml</code> にも入れない。
-</p>
-
-<h2>CSSの使い分け</h2>
-
-<p>
-  補足・注意書きには <code>.note</code> を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;p class="note"&gt;
-```
-
-※補足説明をここに入れる。
-</p></code></pre>
-
-```
-<p>
-  複数段落の補足や作品表記では、<code>div class="note"</code> を使ってもよい。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;div class="note"&gt;
-```
-
-<p>補足説明1</p>
-<p>補足説明2</p>
-</div></code></pre>
-
-```
-<p>
-  表を横スクロール対応にする場合は <code>.table-wrap</code> で囲む。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;div class="table-wrap"&gt;
-```
-
-<table class="info-table">
-<thead>
-<tr>
-<th>項目</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>例</td>
-<td>内容</td>
-</tr>
-</tbody>
-</table>
-</div></code></pre>
-
-```
-<p>
-  攻略データ系の表には、必要に応じて以下を使う。
-</p>
-
-<ul>
-  <li><code>.info-table</code></li>
-  <li><code>.guruguru-table</code></li>
-  <li><code>.enemy-table</code></li>
-</ul>
-
-<h3>info-table</h3>
-
-<p>
-  基本情報やシンプルな項目表に使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;div class="table-wrap"&gt;
-```
-
-<table class="info-table">
-<tbody>
-<tr>
-<th>項目</th>
-<td>内容</td>
-</tr>
-</tbody>
-</table>
-</div></code></pre>
-
-```
-<h3>guruguru-table</h3>
-
-<p>
-  魔法陣一覧、アイテム一覧、装備品一覧などに使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;div class="table-wrap"&gt;
-```
-
-<table class="guruguru-table">
-<thead>
-<tr>
-<th>名称</th>
-<th>消費MP</th>
-<th>効果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>名称</td>
-<td>10</td>
-<td>効果説明</td>
-</tr>
-</tbody>
-</table>
-</div></code></pre>
-
-```
-<h3>enemy-table</h3>
-
-<p>
-  ストーリー攻略記事の出現モンスター表に使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;div class="table-wrap"&gt;
-```
-
-<table class="enemy-table">
-<thead>
-<tr>
-<th>モンスター名</th>
-<th>経験値</th>
-<th>ドロップアイテム</th>
-<th>出現階層</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>モンスター名</td>
-<td>10</td>
-<td>アイテム名</td>
-<td>1F</td>
-</tr>
-</tbody>
-</table>
-</div></code></pre>
-
-```
-<h2>折りたたみ表示の方針</h2>
-
-<p>
-  長い一覧や補足情報では、必要に応じて <code>details</code> を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;details&gt;
-```
-
-<summary>見出し</summary>
-<p>折りたたみ内の内容。</p>
-</details></code></pre>
-
-```
-<p>
-  ただし、ストーリー攻略の主要部分やプレイ感想記事では、読みやすさを優先して折りたたみを使いすぎない。
-</p>
-
-<h2>画像の方針</h2>
-
-<p>
-  画像は <code>figure</code> と <code>figcaption</code> を使う。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;figure&gt;
-```
-
-<img src="../images/フォルダ名/画像ファイル名.JPG" alt="画像の説明">
-<figcaption>画像の補足説明。</figcaption>
-</figure></code></pre>
-
-```
-<p>
-  画像の <code>alt</code> には、画像が見られない場合でも内容が分かる説明を入れる。
-</p>
-
-<p>
-  修理記事では、作業内容が分かるように具体的に書く。
-</p>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>&lt;img src="../images/wonderswan/wonderswan-polarizer-04.JPG" alt="フレキシブルケーブルのロック部分を赤丸で示したワンダースワン基板の写真"&gt;</code></pre>
-
-<h2>サイトマップ追加例</h2>
-
-<p>
-  新しい記事を追加した場合は、<code>sitemap.xml</code> に以下の形式で追加する。
-</p>
-
-<pre class="walkthrough-pre"><code>&lt;url&gt;
-```
-
-<loc>https://little-winter-dream.github.io/フォルダ名/ファイル名.html&lt;/loc>
-<lastmod>YYYY-MM-DD</lastmod>
-</url></code></pre>
-
-```
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>&lt;url&gt;
-```
-
-<loc>https://little-winter-dream.github.io/guruguru-sfc/play-impressions.html&lt;/loc>
-<lastmod>2026-06-14</lastmod>
-</url></code></pre>
-
-```
-<h2>移行時の基本方針</h2>
-
-<p>
-  Blogger版の文章をそのまま移すのではなく、GitHub Pages版では読みやすさを優先して、見出し・表・リンクを整理する。
-</p>
-
-<p>
-  ただし、プレイ感想記事では文章の雰囲気を残し、過度に整えすぎない。
-</p>
-
-<p>
-  攻略データ記事では、読者が探しやすいように以下を意識する。
-</p>
-
-<ul>
-  <li>見出しを分かりやすくする</li>
-  <li>表はスマホでも崩れにくくする</li>
-  <li>目次や戻るリンクを整える</li>
-  <li>作品別攻略目次からリンクできるようにする</li>
-  <li>公開後は <code>sitemap.xml</code> に追加する</li>
-  <li>必要に応じてSearch Consoleでインデックス登録をリクエストする</li>
-</ul>
-
-<h2>プレイ感想記事の方針</h2>
-
-<p>
-  プレイ感想記事では、攻略記事ほど細かく見出しを分けすぎない。
-</p>
-
-<p>
-  見出しは少なめにして、読み物としての流れを優先する。
-</p>
-
-<p>例：</p>
-
-<pre class="walkthrough-pre"><code>遊んでみた全体の感想
-```
-
-戦闘と成長の手触り
-アイテム・お金・レアドロップまわり
-気になったところ
-続編について</code></pre>
-
-```
-<h2>記事作成時の確認項目</h2>
-
-<p>
-  記事作成・移行時は、このメモの内容を基準にする。
-</p>
-
-<p>
-  特に以下は毎回確認する。
-</p>
-
-<ul>
-  <li>記事タイトルに不要な【ゲーム攻略】を付けていないか</li>
-  <li>修理記事では【修理記録】を付けるかどうか</li>
-  <li>作品権利表記が「出典」ではなく【作品について】になっているか</li>
-  <li>本文の最終更新日が <code>YYYY/MM/DD</code> 形式になっているか</li>
-  <li>sitemapの <code>lastmod</code> が <code>YYYY-MM-DD</code> 形式になっているか</li>
-  <li>Blogger側のリンクがGitHub側の相対リンクに置き換わっているか</li>
-  <li>作品別攻略目次へのリンクが正しいか</li>
-  <li><code>sitemap.xml</code> に追加する必要があるか</li>
-</ul>
-```
-
+  &lt;p&gt;最終更新日：YYYY/MM/DD&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    <p>本文の日付：</p>
+    <pre class="walkthrough-pre"><code>最終更新日：2026/08/09</code></pre>
+    <p><code>sitemap.xml</code>の日付：</p>
+    <pre class="walkthrough-pre"><code>&lt;lastmod&gt;2026-08-09&lt;/lastmod&gt;</code></pre>
+
+    <h2>攻略マップ清書ルール</h2>
+    <ul>
+      <li>白背景を使い、壁と通路は黒線で作成する。</li>
+      <li>左側に黒枠の【メモ】欄を設け、【メモ】の見出しは中央揃えにする。</li>
+      <li>赤い普通の数字（<span style="color:#c00;">1・2・3</span>）はアイテムに使う。</li>
+      <li>青い英大文字（<span style="color:#06c;">A・B・C</span>）は階段・マップ間移動・ワープなどの移動地点に使う。</li>
+      <li>対応する移動地点には同じ英字を使う。上り・下り・移動先はマップ上へ詰め込まず、メモ欄へ記載する。</li>
+      <li>青英字には原則として個別メモを付ける。同じ英字が複数ある場合、【移動】欄の説明は1行にまとめてよい。</li>
+      <li>赤い丸数字（<span style="color:#c00;">①・②・③</span>）は敵・イベント・重要地点などに使い、内容に合う見出しを付ける。</li>
+      <li>黒い英小文字（a・b・c）は部屋名や部屋の識別に使う。</li>
+      <li>赤数字のメモには【アイテム】、青英字のメモには【移動】の見出しを付ける。</li>
+      <li>ドアなどの移動要素は青系を基本とし、必要に応じて薄青色で表現する。</li>
+      <li>旧仕様の赤い☆と青い△・▽は、新しいマップでは使用しない。</li>
+      <li>手書きマップの通路構造と記号の位置関係を優先し、不明な場所を勝手に補完しすぎない。</li>
+      <li>マップ本体の見やすさを最優先し、メモ文字も読める大きさを確保する。</li>
+      <li>説明が長い場合は画像内へ詰め込まず、記事本文側で補足する。</li>
+      <li>必要に応じてマップを少し縮小し、左側のメモ欄を下方向へ広げてもよい。</li>
+    </ul>
+
+    <h3>攻略マップについての表記</h3>
+    <p>攻略マップを掲載する作品では、作品別攻略目次などの自然な位置へ次の文章を入れる。</p>
+    <pre class="walkthrough-pre"><code>※当サイトの攻略マップは、実機プレイによる調査をもとに独自に作図したものです。</code></pre>
+    <p>
+      各マップ画像へ毎回繰り返す必要はない。トップページと「このサイトについて」にも、サイトの特徴・運営方針として記載する。現在はWizap!攻略目次にも掲載し、サバイバルキッズ2の既存ページはこの理由だけでは変更しない。
+    </p>
+
+    <h2>画像</h2>
+    <p>本文画像には<code>figure</code>と<code>figcaption</code>を使い、<code>alt</code>には画像が表示されなくても内容が分かる説明を入れる。</p>
+    <pre class="walkthrough-pre"><code>&lt;figure&gt;
+  &lt;img src="../images/フォルダ名/画像ファイル名.JPG" alt="画像の内容を表す説明"&gt;
+  &lt;figcaption&gt;画像の補足説明。&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+    <h2>表・補足・折りたたみ</h2>
+    <ul>
+      <li>補足や注意書きには<code>.note</code>を使う。</li>
+      <li>表は<code>.table-wrap</code>で囲み、スマートフォンで横スクロールできるようにする。</li>
+      <li>基本情報には<code>.info-table</code>、魔法・アイテム・装備品一覧などには<code>.guruguru-table</code>、敵一覧には<code>.enemy-table</code>を必要に応じて使う。</li>
+      <li>長い一覧や補足情報には<code>details</code>を使ってよい。</li>
+      <li>ストーリー攻略の主要部分やプレイ感想では、折りたたみを使いすぎない。</li>
+    </ul>
+
+    <pre class="walkthrough-pre"><code>&lt;div class="table-wrap"&gt;
+  &lt;table class="info-table"&gt;
+    &lt;!-- 表の内容 --&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+    <h2>noindex</h2>
+    <ul>
+      <li>通常の攻略記事、修理記事、目次、プレイ感想には原則として<code>noindex</code>を付けない。</li>
+      <li>検索から来る必要が薄い案内ページでは、必要に応じて<code>noindex, follow</code>を検討する。</li>
+      <li>検索にもリンク巡回にも出したくない内部運用メモでは<code>noindex, nofollow</code>を使う。</li>
+      <li>仮ページに<code>noindex</code>を付けた場合は、正式公開時の外し忘れに注意する。</li>
+    </ul>
+
+    <h2>sitemap.xml</h2>
+    <p>新しい公開ページを追加した場合は、次の形式で<code>sitemap.xml</code>へ追加する。既存ページを更新した場合は、必要に応じて<code>lastmod</code>を更新する。</p>
+    <pre class="walkthrough-pre"><code>&lt;url&gt;
+  &lt;loc&gt;https://little-winter-dream.github.io/フォルダ名/ファイル名.html&lt;/loc&gt;
+  &lt;lastmod&gt;YYYY-MM-DD&lt;/lastmod&gt;
+&lt;/url&gt;</code></pre>
+    <p>内部運用メモや、この<code>site-style-guide.html</code>は追加しない。</p>
+
+    <h2>移行・文章作成の方針</h2>
+    <ul>
+      <li>データ収集と本文の土台は、実際のプレイや作業記録に基づいて作る。</li>
+      <li>Blogger版をそのまま複製せず、GitHub Pages版では見出し・表・リンクを読みやすく整理する。</li>
+      <li>プレイ感想やプレイ日記は、元の文章の雰囲気を残し、過度に固く整えすぎない。</li>
+      <li>読者が情報を探しやすいよう、見出し数と項目数を必要以上に増やさない。</li>
+      <li>不明な情報や未確認の効果を、推測だけで確定事項として書かない。</li>
+    </ul>
+
+    <details class="memo-box">
+      <summary>個人的なメモ</summary>
+
+      <p>
+        まず前提として、データ収集や本文作成は自分の手でプレイして集めたり書いたうえで、文章の読みやすさやHTMLコードなど複雑な点を補助するためにAIの助けを借りることが重要です。
+      </p>
+
+      <p>
+        私にとってこのブログの目的、重要な点はレトロゲームをプレイする人の助けになれる事です。
+      </p>
+
+      <p>
+        今の時代、説明書無しのソフト単体で販売されている場合が多いです。プレイする時必要な情報がこのサイトから得られるように、攻略に行き詰まった時に、私が得た知識の一部でも役に立てば助かる人がいるかもしれません。
+      </p>
+
+      <p>
+        西暦1998年頃にあった昔の個人攻略サイトなどは失われつつあるでしょう。あの人たちが作り上げたレベルとはいかなくても、私が不完全でも新しく発信していけば未来に繋がる物もあるかもしれません。
+      </p>
+
+      <p>
+        小さくても、未熟でも構いません。何年後にも何十年後にもなるかもしれませんが、あなたが作り上げた物が誰かの助けになるかもしれません。
+      </p>
+
+      <p>
+        見知らぬ誰かが作った攻略サイトに助けられた事を忘れないで、今度はあなたがその見知らぬ誰かになれたなら……きっとそれが私の、あなたの人生を使ってでも成し遂げるモノのひとつに成り得るでしょう。
+      </p>
+
+      <p>
+        最後に、もしこのページを見つけた方がいらっしゃいましたらそっとしておいてください。
+      </p>
+
+      <p>
+        「小さな幻想の小部屋」は、このブログの別名としてつけています。<br>
+        私が望むのは小さくても幻のように儚くても構いません、私が幸せだと信じられる物の為に生きようとしています。<br>
+        このブログもその一つです。
+      </p>
+    </details>
   </main>
 
   <footer>
