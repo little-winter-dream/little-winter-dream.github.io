@@ -7,15 +7,12 @@
   <meta name="description" content="冬夢のレトロゲーム攻略メモの記事作成・移行時に使う表記ルール、HTMLテンプレート、作品表記、サイトマップの運用メモです。">
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="../style.css">
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7684661108374221"
-     crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
     <h1>冬夢のレトロゲーム攻略メモ 表記・運用ルール</h1>
-    <p class="note">最終更新日：2026/08/09</p>
+    <p class="note">最終更新日：2026/08/15</p>
   </header>
 
   <main>
@@ -29,13 +26,14 @@
       <li>検索結果に出さないため、<code>noindex, nofollow</code>を設定する。</li>
       <li>通常の記事ページからはリンクしない。</li>
       <li><code>sitemap.xml</code>には追加しない。</li>
-      <li>このページ自体にはGoogle Analyticsを設置しなくてよい。</li>
+      <li>このページ自体にはGoogle AnalyticsとGoogle AdSenseを設置しなくてよい。</li>
     </ul>
 
     <h2>公開前チェックリスト</h2>
     <ul>
       <li><code>&lt;title&gt;</code>と<code>meta description</code>がページ内容に合っているか。</li>
       <li>Google Analytics（測定ID：<code>G-68L45S7GXM</code>）が<code>head</code>内にあるか。</li>
+      <li>Google AdSense（パブリッシャーID：<code>ca-pub-7684661108374221</code>）が<code>head</code>内に1回だけあるか。</li>
       <li>サイト内リンクと画像パスが相対リンクになっているか。</li>
       <li>トップページや作品別攻略目次へ戻るリンクが正しいか。</li>
       <li>画像に内容の分かる<code>alt</code>が付いているか。</li>
@@ -63,7 +61,7 @@
     <h3>攻略記事・攻略データ</h3>
     <ul>
       <li>記事内容が分かるタイトルと<code>meta description</code></li>
-      <li>Google Analytics</li>
+      <li>Google AnalyticsとGoogle AdSense</li>
       <li>トップページ・作品別攻略目次へ戻るリンク</li>
       <li>必要に応じた見出し、表、画像、攻略マップ</li>
       <li>【作品について】</li>
@@ -75,7 +73,7 @@
     <h3>攻略目次・プレイ日記一覧</h3>
     <ul>
       <li>作品名とページの役割が分かるタイトル・説明文</li>
-      <li>Google Analytics</li>
+      <li>Google AnalyticsとGoogle AdSense</li>
       <li>掲載済み記事へのリンク</li>
       <li>トップページへ戻るリンク</li>
       <li>【作品について】</li>
@@ -88,7 +86,7 @@
       <li>必要に応じてタイトルに【修理記録】を付ける。</li>
       <li>使用した道具や作業内容、注意点を実際の作業に基づいて記載する。</li>
       <li>写真は作業箇所が分かる<code>alt</code>と<code>figcaption</code>を付ける。</li>
-      <li>Google Analytics、戻るリンク、【作品について】、最終更新日、<code>sitemap.xml</code>を確認する。</li>
+      <li>Google AnalyticsとGoogle AdSense、戻るリンク、【作品について】、最終更新日、<code>sitemap.xml</code>を確認する。</li>
     </ul>
 
     <h3>サイト案内・内部ページ</h3>
@@ -105,6 +103,7 @@
 &lt;html lang="ja"&gt;
 &lt;head&gt;
   &lt;!-- Google Analytics --&gt;
+  &lt;!-- Google AdSense --&gt;
   &lt;meta charset="utf-8"&gt;
   &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
   &lt;title&gt;記事タイトル｜冬夢のレトロゲーム攻略メモ&lt;/title&gt;
@@ -155,8 +154,24 @@
 &lt;/script&gt;</code></pre>
 
     <p>
-      独自ドメインへ切り替える場合は、Google AnalyticsのGA4データストリームURLも新しいドメインへ変更することを推奨する。
+      独自ドメインへ切り替えた場合は、Google AnalyticsのGA4データストリームURLも新しいドメインへ変更する。
     </p>
+
+    <h2>Google AdSense</h2>
+    <p>
+      AdSenseの審査・広告配信に使う公開HTMLページでは、次のコードを<code>head</code>内へ1回だけ追加する。
+    </p>
+
+    <pre class="walkthrough-pre"><code>&lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7684661108374221"
+     crossorigin="anonymous"&gt;&lt;/script&gt;</code></pre>
+
+    <ul>
+      <li>新しい公開ページを作るときは、Google Analyticsと一緒に追加する。</li>
+      <li>既存の公開ページを複製して作る場合も、コードが1回だけ含まれていることを確認する。</li>
+      <li>同じページへ重複して追加しない。</li>
+      <li>内部運用メモなど、広告対象にしないページには追加しない。</li>
+      <li>コードを追加しただけで、審査前から広告が表示されるわけではない。</li>
+    </ul>
 
     <h2>タイトルとmeta description</h2>
     <p>
@@ -266,7 +281,7 @@ play-impressions.html</code></pre>
     <h2>sitemap.xml</h2>
     <p>新しい公開ページを追加した場合は、次の形式で<code>sitemap.xml</code>へ追加する。既存ページを更新した場合は、必要に応じて<code>lastmod</code>を更新する。</p>
     <pre class="walkthrough-pre"><code>&lt;url&gt;
-  &lt;loc&gt;https://little-winter-dream.github.io/フォルダ名/ファイル名.html&lt;/loc&gt;
+  &lt;loc&gt;https://little-winter-dream.com/フォルダ名/ファイル名.html&lt;/loc&gt;
   &lt;lastmod&gt;YYYY-MM-DD&lt;/lastmod&gt;
 &lt;/url&gt;</code></pre>
     <p>内部運用メモや、この<code>site-style-guide.html</code>は追加しない。</p>
