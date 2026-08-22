@@ -361,3 +361,104 @@ footer {
     color: #666666;
     margin-top: 40px;
 }
+
+/* =========================
+   12. 画像の拡大表示（ライトボックス）
+========================= */
+
+.lightbox-target {
+    cursor: zoom-in;
+}
+
+.lightbox-target:focus-visible {
+    outline: 3px solid #3366cc;
+    outline-offset: 4px;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding-top: max(64px, calc(env(safe-area-inset-top) + 52px));
+    padding-right: max(16px, env(safe-area-inset-right));
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    padding-left: max(16px, env(safe-area-inset-left));
+    background-color: rgba(0, 0, 0, 0.88);
+    cursor: zoom-out;
+}
+
+.lightbox__image {
+    display: block;
+    width: auto;
+    max-width: min(96vw, 1600px);
+    height: auto;
+    max-height: calc(100vh - 112px);
+    max-height: calc(100dvh - 112px);
+    margin: 0;
+    object-fit: contain;
+    background-color: #ffffff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    touch-action: pinch-zoom;
+}
+
+.lightbox__caption {
+    max-width: min(96vw, 900px);
+    margin: 0;
+    color: #ffffff;
+    font-size: 90%;
+    line-height: 1.5;
+    text-align: center;
+    cursor: default;
+}
+
+.lightbox__close {
+    position: fixed;
+    top: max(10px, env(safe-area-inset-top));
+    right: max(10px, env(safe-area-inset-right));
+    box-sizing: border-box;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.65);
+    font: inherit;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+    color: #333333;
+    background-color: #ffffff;
+    outline: 3px solid #9999cc;
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .lightbox {
+        gap: 8px;
+    }
+
+    .lightbox__image {
+        max-width: 100%;
+    }
+}

@@ -12,7 +12,7 @@
 <body>
   <header>
     <h1>冬夢のレトロゲーム攻略メモ 表記・運用ルール</h1>
-    <p class="note">最終更新日：2026/08/15</p>
+    <p class="note">最終更新日：2026/08/22</p>
   </header>
 
   <main>
@@ -37,6 +37,7 @@
       <li>サイト内リンクと画像パスが相対リンクになっているか。</li>
       <li>トップページや作品別攻略目次へ戻るリンクが正しいか。</li>
       <li>画像に内容の分かる<code>alt</code>が付いているか。</li>
+      <li>画像を掲載する公開ページで、ページ階層に合った相対パスの<code>lightbox.js</code>を読み込んでいるか。</li>
       <li>記事下部に【作品について】と日付があるか。</li>
       <li>本文の日付が<code>YYYY/MM/DD</code>形式になっているか。</li>
       <li>公開ページに不要な<code>noindex</code>が残っていないか。</li>
@@ -254,6 +255,14 @@ play-impressions.html</code></pre>
   &lt;img src="../images/フォルダ名/画像ファイル名.JPG" alt="画像の内容を表す説明"&gt;
   &lt;figcaption&gt;画像の補足説明。&lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
+
+    <p>
+      画像を掲載する公開ページでは、<code>&lt;/body&gt;</code>の直前に、ページ階層に合った相対パスで共通のライトボックス用JavaScriptを読み込む。
+    </p>
+    <pre class="walkthrough-pre"><code>&lt;script src="../lightbox.js" defer&gt;&lt;/script&gt;</code></pre>
+    <p class="note">
+      2階層下のページでは<code>../../lightbox.js</code>のように調整する。同じページへ重複して追加しない。
+    </p>
 
     <h2>表・補足・折りたたみ</h2>
     <ul>
