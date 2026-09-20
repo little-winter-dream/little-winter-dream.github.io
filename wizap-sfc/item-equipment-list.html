@@ -56,6 +56,20 @@
     .note[id] {
       scroll-margin-top: 1.5rem;
     }
+
+    @media (max-width: 600px) and (orientation: portrait) {
+      .feneri-table th:nth-child(4),
+      .feneri-table td:nth-child(4),
+      .other-equipment-table th:nth-child(5),
+      .other-equipment-table td:nth-child(5) {
+        min-width: 180px;
+      }
+
+      .other-equipment-table th:nth-child(6),
+      .other-equipment-table td:nth-child(6) {
+        min-width: 160px;
+      }
+    }
   </style>
 </head>
 
@@ -166,7 +180,7 @@
 
     <h3>道具・特殊アイテム</h3>
     <div class="table-wrap">
-      <table class="wizap-item-table">
+      <table class="wizap-item-table feneri-table">
         <thead>
           <tr>
             <th>アイテム名</th>
@@ -193,7 +207,7 @@
 
     <h3>装備品</h3>
     <div class="table-wrap">
-      <table class="wizap-item-table">
+      <table class="wizap-item-table feneri-table">
         <thead>
           <tr>
             <th>アイテム名</th>
@@ -215,7 +229,7 @@
 
     <h2>その他の装備品</h2>
     <div class="table-wrap">
-      <table class="wizap-item-table">
+      <table class="wizap-item-table other-equipment-table">
         <thead>
           <tr>
             <th>アイテム名</th>
